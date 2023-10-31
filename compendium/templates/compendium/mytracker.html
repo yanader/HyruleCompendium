@@ -1,0 +1,51 @@
+{% extends "compendium/layout.html" %}
+
+{% block body %}
+
+{% if user.is_authenticated %}
+<h3 class="welcome">Welcome to your compendium {{user.username}}</h3>
+
+<div class="text-layout">
+    <p>Using the BrowseMyTracker feature will only show items that are incomplete. If you want to see all items then <a href="{% url 'index' %}">click here to browse!</a> </p>
+    <p>Alternatively you can view your to-do list!</p>
+</div>
+
+<div class="listdiv">
+    <a class="my-browser" href="#">BrowseMyTracker</a>
+    <a class="my-todo" href="#">To-Do List</a>
+</div>
+
+
+<div class="my-browser-div">
+
+    <div class="listdiv">
+        <a class="my-cat-link" href="#" data-category="creatures">Creatures</a>
+        <a class="my-cat-link" href="#" data-category="materials">Materials</a>
+        <a class="my-cat-link" href="#" data-category="equipment">Equipment</a>
+        <a class="my-cat-link" href="#" data-category="monsters">Monsters</a>
+        <a class="my-cat-link" href="#" data-category="treasure">Treasure</a>
+    </div>
+    <div class="results-div">
+        <ul class="my-item-list">
+        </ul>
+    </div>
+</div>
+
+<div class="results-div">
+<div class="my-todo-div">
+    Here's your to-do list!
+    <ul class="todo-list">
+    </ul>
+</div>
+</div>
+
+
+
+{% else %}
+<p>Log in to use the My Tracker feature</p>
+{% endif %}
+
+
+
+
+{% endblock %}

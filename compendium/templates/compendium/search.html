@@ -1,0 +1,23 @@
+{% extends "compendium/layout.html" %}
+
+{% block body %}
+
+    <h3>Search Page</h3>
+
+<div class="text-layout">
+    <p>
+    Search for items. Substrings will provide a list of matches!
+    </p>
+</div>
+
+<div class="search-div">
+    <input type="text" placeholder="Compendium entry" class="compendium-search">
+    <button class="search-button">Search</button>
+</div>
+
+<div class="results-div">
+    <ul class="search-list">
+    </ul>
+</div>
+
+{% endblock %}

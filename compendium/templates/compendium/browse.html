@@ -1,0 +1,26 @@
+{% extends "compendium/layout.html" %}
+
+{% block body %}
+
+<div class="text-layout">
+        <p>
+        Welcome to the compendium! Below you can browse items in Breath of the Wild by category. Alternatively you can search for a specific item or, if you're unsure of what to work on, request a random entry from the compendium. If you create an account you can track your completion progress as well as manage a to-do list.
+        </p>
+</div>
+
+
+
+<div class="listdiv">
+        <a class="cat-link" href="#" data-category="creatures">Creatures</a>
+        <a class="cat-link" href="#" data-category="materials">Materials</a>
+        <a class="cat-link" href="#" data-category="equipment">Equipment</a>
+        <a class="cat-link" href="#" data-category="monsters">Monsters</a>
+        <a class="cat-link" href="#" data-category="treasure">Treasure</a>
+</div>
+
+<div class="results-div">
+        <ul class="item-list">
+        </ul>
+</div>
+
+{% endblock %}

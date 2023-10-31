@@ -1,0 +1,35 @@
+{% extends "compendium/layout.html" %}
+
+{% load custom_tags %}
+
+{% block body %}
+
+<h3>{{data.name|entry_title}}</h3>
+
+
+<p class="text-layout">{{data.description}}
+    <br>
+    {% if user.is_authenticated %}
+        <button name="{{data.id}}"
+         class="toggle-complete-button" onclick="toggle_collect(name)">{% if not completed %}Complete{% else %}Uncomplete{% endif %}</button>
+         <button name="{{data.id}}"
+         class="toggle-todo-button" onclick="toggle_todo(name)">{% if not todo %}Add to todo{% else %}Remove from todo{% endif %}</button>
+    {% else %}
+        <p class="text-layout"><a href="{% url 'login' %}">Log in to fill your compendium</a></p>
+    {% endif %}
+</p>
+
+<div class="item-layout">
+
+    <h6>Common Locations</h6>
+    <ul>
+        {% for location in data.common_locations %}
+            <li>{{location}}</li>
+        {% endfor %}
+    </ul>
+    <img src="{{data.image}}">
+</div>
+
+
+
+{% endblock %}
