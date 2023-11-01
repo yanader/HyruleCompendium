@@ -1,5 +1,5 @@
 # Hyrule Compendium
-#### Video Demo:  ::::TODO::::
+#### Video Demo:  https://youtu.be/5QqQxyYnbEs
 #### Description:
 
 For my final proect for CS50w I've used Django and JavaScript to build "The Hyrule Compendium". This app will allow users to look up items and monsters in The Legend of Zelda: Breath of the Wild, a video game on Nintendo Switch. A portion of the game involves the tracking and collecting photographs of the creatures, monsters, weapons and materials in the land of Hyrule. The website is designed to assist users in looking up the in-game locations that they can track down these items as well as tracking their progress and managing a separate TODO list. Additionally, if feeling indecisive, a "Random Entry" feature can be used to give the user an item or creature to complete, collect or photograph.
